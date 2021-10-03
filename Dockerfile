@@ -5,4 +5,4 @@ WORKDIR /usr/src/app
 COPY . .
 RUN gem install webrick
 
-CMD ["ruby", "details.rb","8081"]
+CMD ["ruby", "details.rb", "8081"]
