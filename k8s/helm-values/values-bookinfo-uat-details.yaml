@@ -1,0 +1,15 @@
+details:
+  namespace: student17-bookinfo-uat
+  image: ghcr.io/pspapleng/bookinfo-details
+  tag: uat
+  replicas: 1
+  imagePullSecrets: registry-bookinfo
+  port: 8081
+ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  host: itkmitl.bookinfo.uat.opsta.net
+  path: "/student17/details(/|$)(.*)"
+  serviceType: ClusterIP
+    
